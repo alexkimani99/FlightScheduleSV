@@ -5,6 +5,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import java.time.LocalDateTime;
+
 @Entity
 public class Arrival {
     @Id
@@ -16,9 +18,28 @@ public class Arrival {
     private String aircraftType;
     private String flightNumber;
     private String origin;
-    private String estimatedTimeOfArrival;
+    private LocalDateTime estimatedTimeOfArrival;
     private int totalPassengers;
     private int totalLuggage;
+
+    // Empty constructor for JPA
+    public Arrival() {
+    }
+
+    // Constructor with parameters
+    public Arrival(String airport, String flightStatus, String aircraftType,
+                   String flightNumber, String origin, LocalDateTime estimatedTimeOfArrival,
+                   int totalPassengers, int totalLuggage) {
+        this.airport = airport;
+        this.flightStatus = flightStatus;
+        this.aircraftType = aircraftType;
+        this.flightNumber = flightNumber;
+        this.origin = origin;
+        this.estimatedTimeOfArrival = estimatedTimeOfArrival;
+        this.totalPassengers = totalPassengers;
+        this.totalLuggage = totalLuggage;
+    }
+
 
     //Getters and Setters
     public Long getId() {
@@ -69,11 +90,11 @@ public class Arrival {
         this.origin = origin;
     }
 
-    public String getEstimatedTimeOfArrival() {
+    public LocalDateTime getEstimatedTimeOfArrival() {
         return estimatedTimeOfArrival;
     }
 
-    public void setEstimatedTimeOfArrival(String estimatedTimeOfArrival) {
+    public void setEstimatedTimeOfArrival(LocalDateTime estimatedTimeOfArrival) {
         this.estimatedTimeOfArrival = estimatedTimeOfArrival;
     }
 
