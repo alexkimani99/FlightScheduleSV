@@ -124,11 +124,12 @@ Salidas:
   "estimatedTimeOfDeparture": "2023-11-18T18:00:00",
   "totalPassengers": 163,
   "totalLuggage": 90
-}```
-
+}
+```
 
 **- PUT /departures/{id}:** Actualiza una salida existente.
-```// Ejemplo para PUT departures mediante ID
+```
+// Ejemplo para PUT departures mediante ID
 {
   "airport": "MAD",
   "flightNumber": "VY7784",
@@ -136,6 +137,6 @@ Salidas:
   "estimatedTimeOfDeparture": "2023-11-18T18:00:00",
   "totalPassengers": 121,
   "totalLuggage": 13
-}```
-
+}
+```
 **- DELETE /departures/{id}:** Elimina una salida existente.
