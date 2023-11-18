@@ -43,19 +43,19 @@ La aplicación proporciona los siguientes endpoints:
 
 · **POST /v1/api/flights/departures:** Agrega una nueva llegada.
 
-· **GET /v1/api/arrivals:** Obtiene la lista de llegadas.
+· **GET /v1/api/flights/arrivals:** Obtiene la lista de llegadas.
 
-· **DELETE /v1/api/arrivals/{id}:** Elimina la llegada con el ID especificado.
+· **DELETE /v1/api/flights/arrivals/{id}:** Elimina la llegada con el ID especificado.
 
-· **PUT /v1/api/arrivals/{id}:** Actualiza la llegada con el ID especificado.
+· **PUT /v1/api/flights/arrivals/{id}:** Actualiza la llegada con el ID especificado.
 
-· **POST /v1/api/departures:** Agrega una nueva salida.
+· **POST /v1/api/flights/departures:** Agrega una nueva salida.
 
-· **GET /api/departures:** Obtiene la lista de salidas.
+· **GET /v1/api/flights/departures:** Obtiene la lista de salidas.
 
-· **DELETE /api/departures/{id}:** Elimina la salida con el ID especificado.
+· **DELETE /v1/api/flights/departures/{id}:** Elimina la salida con el ID especificado.
 
-· **PUT /api/departures/{id}:** Actualiza la salida con el ID especificado.
+· **PUT /v1/api/flights/departures/{id}:** Actualiza la salida con el ID especificado.
 
 ## Configuración
 El archivo de configuración principal se encuentra en src/main/resources/application.properties y contiene propiedades como la configuración de la base de datos.
