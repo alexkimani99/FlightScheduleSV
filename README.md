@@ -92,8 +92,8 @@ Llegadas:
   "estimatedTimeOfArrival": "2023-11-18T18:32:00",
   "totalPassengers": 180,
   "totalLuggage": 80
-}```
-
+}
+```
 **- PUT /arrivals/{id}:** Actualiza una llegada existente.
 ```// Ejemplo para PUT proporcionando la ID
 {
