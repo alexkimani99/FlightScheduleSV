@@ -8,6 +8,7 @@ FlightScheduleSV contiene una aplicación Spring Boot que sirve como backend par
 2. [Cómo Iniciar la Aplicación](#cómo-iniciar-la-aplicación)
 3. [Endpoints Disponibles](#endpoints-disponibles)
 4. [Configuración](#configuracion)
+5. [Pruebas con POSTMAN](#pruebas-con-postman)
 
 ## Estructura del Proyecto
 
@@ -70,3 +71,71 @@ spring.jpa.hibernate.ddl-auto=update
 La base de datos está desplegada online.
 **DDBB Username:** uvxzsqezx9jzkisu
 **DDBB Password:** c6yUwGB6Xc836j2WJxx2
+
+## Pruebas con POSTMAN
+He probado los endpoints utilizando POSTMAN.
+
+Llegadas:
+
+**- GET /arrivals:** Obtiene la lista de llegadas.
+**- GET /arrivals/{id}:** Obtiene detalles de una llegada específica.
+
+  
+**- POST /arrivals:** Crea una nueva llegada.
+// Ejemplo para POST /v1/api/flights/arrivals
+{
+  "airport": "SVQ",
+  "flightStatus": "On Time",
+  "aircraftType": "Airbus A330",
+  "flightNumber": "FR12345",
+  "origin": "TFS",
+  "estimatedTimeOfArrival": "2023-11-18T18:32:00",
+  "totalPassengers": 180,
+  "totalLuggage": 80
+}
+
+**- PUT /arrivals/{id}:** Actualiza una llegada existente.
+// Ejemplo para PUT proporcionando la ID
+{
+  "airport": "PMI",
+  "flightStatus": "Delayed",
+  "aircraftType": "Boeing 737",
+  "flightNumber": "FR9423",
+  "origin": "BCN",
+  "estimatedTimeOfArrival": "2023-11-18T12:30:00",
+  "totalPassengers": 170,
+  "totalLuggage": 110
+}
+
+**- DELETE /arrivals/{id}:** Elimina una llegada existente.
+
+Salidas:
+
+**- GET /departures:** Obtiene la lista de salidas.
+**- GET /departures/{id}:** Obtiene detalles de una salida específica.
+
+
+**- POST /departures:** Crea una nueva salida.
+// Ejemplo para POST departures
+{
+  "airport": "SVQ",
+  "flightNumber": "FR7784",
+  "destination": "CIA",
+  "estimatedTimeOfDeparture": "2023-11-18T18:00:00",
+  "totalPassengers": 163,
+  "totalLuggage": 90
+}
+
+
+**- PUT /departures/{id}:** Actualiza una salida existente.
+// Ejemplo para PUT departures mediante ID
+{
+  "airport": "MAD",
+  "flightNumber": "VY7784",
+  "destination": "FCO",
+  "estimatedTimeOfDeparture": "2023-11-18T18:00:00",
+  "totalPassengers": 121,
+  "totalLuggage": 13
+}
+
+**- DELETE /departures/{id}:** Elimina una salida existente.
