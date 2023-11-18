@@ -61,13 +61,13 @@ La aplicación proporciona los siguientes endpoints:
 El archivo de configuración principal se encuentra en src/main/resources/application.properties y contiene propiedades como la configuración de la base de datos.
 
 #Database connection and configuration
-
+```
 spring.datasource.url=jdbc:mysql://bi6s3pdv2xip3lbyknhr-mysql.services.clever-cloud.com:3306/bi6s3pdv2xip3lbyknhr
 spring.datasource.username=uvxzsqezx9jzkisu
 spring.datasource.password=c6yUwGB6Xc836j2WJxx2
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.jpa.hibernate.ddl-auto=update
-
+```
 La base de datos está desplegada online.
 **DDBB Username:** uvxzsqezx9jzkisu
 **DDBB Password:** c6yUwGB6Xc836j2WJxx2
@@ -82,7 +82,7 @@ Llegadas:
 
   
 **- POST /arrivals:** Crea una nueva llegada.
-// Ejemplo para POST /v1/api/flights/arrivals
+```// Ejemplo para POST /v1/api/flights/arrivals
 {
   "airport": "SVQ",
   "flightStatus": "On Time",
@@ -92,10 +92,10 @@ Llegadas:
   "estimatedTimeOfArrival": "2023-11-18T18:32:00",
   "totalPassengers": 180,
   "totalLuggage": 80
-}
+}```
 
 **- PUT /arrivals/{id}:** Actualiza una llegada existente.
-// Ejemplo para PUT proporcionando la ID
+```// Ejemplo para PUT proporcionando la ID
 {
   "airport": "PMI",
   "flightStatus": "Delayed",
@@ -106,7 +106,7 @@ Llegadas:
   "totalPassengers": 170,
   "totalLuggage": 110
 }
-
+```
 **- DELETE /arrivals/{id}:** Elimina una llegada existente.
 
 Salidas:
@@ -116,7 +116,7 @@ Salidas:
 
 
 **- POST /departures:** Crea una nueva salida.
-// Ejemplo para POST departures
+```// Ejemplo para POST departures
 {
   "airport": "SVQ",
   "flightNumber": "FR7784",
@@ -124,11 +124,11 @@ Salidas:
   "estimatedTimeOfDeparture": "2023-11-18T18:00:00",
   "totalPassengers": 163,
   "totalLuggage": 90
-}
+}```
 
 
 **- PUT /departures/{id}:** Actualiza una salida existente.
-// Ejemplo para PUT departures mediante ID
+```// Ejemplo para PUT departures mediante ID
 {
   "airport": "MAD",
   "flightNumber": "VY7784",
@@ -136,6 +136,6 @@ Salidas:
   "estimatedTimeOfDeparture": "2023-11-18T18:00:00",
   "totalPassengers": 121,
   "totalLuggage": 13
-}
+}```
 
 **- DELETE /departures/{id}:** Elimina una salida existente.
