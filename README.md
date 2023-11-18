@@ -43,13 +43,13 @@ La aplicación proporciona los siguientes endpoints:
 
 · **POST /v1/api/flights/departures:** Agrega una nueva llegada.
 
-· **GET v1/api/arrivals:** Obtiene la lista de llegadas.
+· **GET /v1/api/arrivals:** Obtiene la lista de llegadas.
 
-· **DELETE v1/api/arrivals/{id}:** Elimina la llegada con el ID especificado.
+· **DELETE /v1/api/arrivals/{id}:** Elimina la llegada con el ID especificado.
 
-· **PUT v1/api/arrivals/{id}:** Actualiza la llegada con el ID especificado.
+· **PUT /v1/api/arrivals/{id}:** Actualiza la llegada con el ID especificado.
 
-· **POST v1/api/departures:** Agrega una nueva salida.
+· **POST /v1/api/departures:** Agrega una nueva salida.
 
 · **GET /api/departures:** Obtiene la lista de salidas.
 
