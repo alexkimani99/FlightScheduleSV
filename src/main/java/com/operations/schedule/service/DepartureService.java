@@ -2,6 +2,8 @@ package com.operations.schedule.service;
 
 import com.operations.schedule.repository.DepartureRepository;
 import com.operations.schedule.model.Departure;
+import jakarta.persistence.EntityNotFoundException;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,4 +32,14 @@ public class DepartureService {
         departureRepository.deleteById(id);
     }
 
+    public Departure updateDeparture(Long id, Departure updatedDeparture) {
+        Departure existingDeparture = departureRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Departure not found with id: " + id));
+
+        // Lombok to copy properties into existing object
+        BeanUtils.copyProperties(updatedDeparture, existingDeparture, "id");
+
+        // Saves updated departure
+        return departureRepository.save(existingDeparture);
+    }
 }
