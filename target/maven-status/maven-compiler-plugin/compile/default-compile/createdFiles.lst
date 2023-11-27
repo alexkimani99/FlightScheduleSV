@@ -1,0 +1,10 @@
+com\operations\schedule\repository\DepartureRepository.class
+com\operations\schedule\service\ArrivalService.class
+com\operations\schedule\service\DepartureService.class
+com\operations\schedule\model\Arrival$ArrivalBuilder.class
+com\operations\schedule\model\Departure.class
+com\operations\schedule\ScheduleApplication.class
+com\operations\schedule\model\Arrival.class
+com\operations\schedule\controller\FlightController.class
+com\operations\schedule\repository\ArrivalRepository.class
+com\operations\schedule\model\Departure$DepartureBuilder.class
