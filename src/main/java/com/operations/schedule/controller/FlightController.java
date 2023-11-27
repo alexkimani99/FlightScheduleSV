@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "https://fsgui-43ee536c5c1d.herokuapp.com")
 @RequestMapping("/v1/api/flights")
 public class FlightController {
     @Autowired
